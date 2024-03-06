@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+    min-height: 100vh;
+    background-color: rgb(204, 222, 255);
+}
+
+.intro {
+    text-align: center;
+    padding: 1rem;
+}
+
+.wrapper {
+    width: 65vmin;
+    height: 70vmin;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: rgb(33, 33, 73);
+}
+
+.game_details {
+    display: flex;
+    justify-content: space-between;
+    color: #e7e7e7;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 20px 27px;
+}
+
+.play_board {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+    background-color: rgb(22, 22, 51);
+}
+
+.play_board .food {
+    background-color: red;
+}
+
+.play_board .head {
+    background-color: rgb(43, 255, 0);
+}
+
+.btns_movement {
+    display: none;
+}
+
+@media (max-width: 500px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .wrapper {
+        width: 98%;
+        height: 50vh;
+    }
+
+    .btns_movement {
+        display: grid;
+        place-items: center;
+        grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+        gap: 3.5rem;
+        background-color: #ffffff;
+        border-radius: 50%;
+        padding: 10px;
+    }
+
+    .arrow_btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        background-color: #e7e7e7;
+        border: none;
+        border-radius: 50%;
+        scale: 2.3;
+        padding: 3px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .arrow_up {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .arrow_left {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .arrow_right {
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    .arrow_down {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .arrow_btn:active {
+        scale: 2.1;
+    }
+
+}
