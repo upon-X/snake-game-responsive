@@ -89,7 +89,7 @@ body {
         display: grid;
         place-items: center;
         grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-        gap: 3.5rem;
+        gap: 2.3rem;
         background-color: #ffffff;
         border-radius: 50%;
         padding: 10px;
