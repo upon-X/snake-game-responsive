@@ -1,6 +1,7 @@
 const playBoard = document.querySelector(".play_board")
 const scoreElement = document.querySelector(".score")
 const highScoreElement = document.querySelector(".high_score")
+// const Swal = require('sweetalert2')
 
 let gameOver = false
 let foodX, foodY;
@@ -9,7 +10,7 @@ let snakeBody = [];
 let velocityX = 0, velocityY = 0;
 let setIntervalId;
 let score = 0
-let highScore = localStorage.getItem("high_score")
+let highScore = localStorage.getItem("high_score") || 0
 highScoreElement.innerHTML = `High Score : ${highScore}`
 
 const foodPosition = () => {
@@ -52,8 +53,13 @@ const changeDirectionViaBtns = (direction) => {
 
 const handleGameOver = () => {
     clearInterval(setIntervalId)
-    alert("Game Over!")
-    location.reload()
+    alertGameOver()
+    // Swal.fire({
+    //     title: 'Game Over!',
+    //     text: `You lost, your score was ${score}`,
+    //     icon: 'inform',
+    //     confirmButtonText: 'Try Again'
+    // })
 }
 
 const initGame = () => {

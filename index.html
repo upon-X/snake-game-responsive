@@ -11,7 +11,8 @@
 <body>
     <div class="intro">
         <h1>Snake Game</h1>
-        <p>Use the Arrow keycaps</p>
+        <p class="keycaps_desktop">Use the Arrow keycaps</p>
+        <p class="btn_mobile">Use the Arrow buttons</p>
     </div>
     <div class="wrapper">
         <div class="game_details">
@@ -21,12 +22,46 @@
         <div class="play_board"></div>
     </div>
     <div class="btns_movement">
-        <button class="arrow_btn arrow_up" onclick="changeDirectionViaBtns('ArrowUp')">🢁</button>
-        <button class="arrow_btn arrow_down" onclick="changeDirectionViaBtns('ArrowDown')">🢃</button>
-        <button class="arrow_btn arrow_left" onclick="changeDirectionViaBtns('ArrowLeft')">🢀</button>
-        <button class="arrow_btn arrow_right" onclick="changeDirectionViaBtns('ArrowRight')">🢂</button>
+        <button class="arrow_btn arrow_up" onclick="changeDirectionViaBtns('ArrowUp')">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-up" width="24"
+                height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                    d="M9 20v-8h-3.586a1 1 0 0 1 -.707 -1.707l6.586 -6.586a1 1 0 0 1 1.414 0l6.586 6.586a1 1 0 0 1 -.707 1.707h-3.586v8a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+            </svg>
+        </button>
+        <button class="arrow_btn arrow_down" onclick="changeDirectionViaBtns('ArrowDown')">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-down" width="24"
+                height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                    d="M15 4v8h3.586a1 1 0 0 1 .707 1.707l-6.586 6.586a1 1 0 0 1 -1.414 0l-6.586 -6.586a1 1 0 0 1 .707 -1.707h3.586v-8a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1z" />
+            </svg>
+        </button>
+        <button class="arrow_btn arrow_left" onclick="changeDirectionViaBtns('ArrowLeft')">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-left" width="24"
+                height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                    d="M20 15h-8v3.586a1 1 0 0 1 -1.707 .707l-6.586 -6.586a1 1 0 0 1 0 -1.414l6.586 -6.586a1 1 0 0 1 1.707 .707v3.586h8a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1z" />
+            </svg>
+        </button>
+        <button class="arrow_btn arrow_right" onclick="changeDirectionViaBtns('ArrowRight')">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-right" width="24"
+                height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                    d="M4 9h8v-3.586a1 1 0 0 1 1.707 -.707l6.586 6.586a1 1 0 0 1 0 1.414l-6.586 6.586a1 1 0 0 1 -1.707 -.707v-3.586h-8a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1z" />
+            </svg>
+        </button>
     </div>
     <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert.js"></script>
 </body>
 
 </html>
