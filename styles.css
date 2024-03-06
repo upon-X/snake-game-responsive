@@ -10,7 +10,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
     min-height: 100vh;
     background-color: rgb(204, 222, 255);
 }
